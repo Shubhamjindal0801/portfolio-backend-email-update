@@ -19,9 +19,6 @@ const Users = new Schema({
         require: true
     },
 },
-    {
-        strict: true
-    }
 )
 
 
