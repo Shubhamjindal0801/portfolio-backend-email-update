@@ -20,7 +20,7 @@ const Users = new Schema({
     },
 },
     {
-        strict: false
+        strict: true
     }
 )
 
