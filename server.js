@@ -16,11 +16,11 @@ app.use(
 app.use('/user',UserRoutes)
 
 
-Mongoose.connect(process.env.MONGO_URI)
+Mongoose.connect('mongodb+srv://Shubham_0801:shubu0801@cluster0.9p799jp.mongodb.net/portfolio?retryWrites=true&w=majority')
     .then(() => {
         console.log('MongoDB is connected')
-        app.listen(process.env.SERVER_PORT, () => {
-            console.log(`Server listening on ${process.env.SERVER_PORT}`)
+        app.listen(8004, () => {
+            console.log(`Server listening on 8004`)
         })
     })
     .catch((err) => {

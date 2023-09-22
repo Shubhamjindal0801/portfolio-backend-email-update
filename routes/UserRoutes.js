@@ -2,7 +2,6 @@ const express = require("express");
 const Joi = require("joi");
 const UserSchema = require("../models/Users");
 const nodemailer = require('nodemailer')
-require('dotenv').config()
 
 const router = express();
 
@@ -64,14 +63,14 @@ router.post("/sendmail", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: `${process.env.EMAIL_ID}`,
-      pass: `${process.env.PASSWORD}`,
+      user: 'shubhamjindal61999@gmail.com',
+      pass: 'mkgf pvdi ncfv vkya',
     },
   });
 
   const mailOptions = {
-    from: `${process.env.EMAIL_ID}`,
-    to: `${process.env.EMAIL_ID}`,
+    from: 'shubhamjindal61999@gmail.com',
+    to: 'shubhamjindal61999@gmail.com',
     subject: "New Form Submission",
     text: `
          Name: ${formData.name}
